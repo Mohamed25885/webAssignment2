@@ -1,0 +1,152 @@
+a.clickable{
+  text-decoration: none;
+  font-size: 15px;
+  color:indigo;
+}
+header{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  color:gray;
+}
+ul.about{
+  width: 40%;
+  border: 5px dotted black;
+}
+ul.nav{
+height: 30px;
+width: 100%;
+list-style-type: none;
+background-color: blue;
+color: white;
+
+font-size: medium;
+
+}
+li.empty, li.empty:hover{
+background-color: blue;
+}
+a.nav{
+text-decoration: none;
+color:white;
+
+}
+a.nav:hover{
+text-decoration: none;
+color:black;
+}
+li.nav{
+  margin: 0 9%;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+footer{
+clear: both;
+width: 100%;
+margin: auto;
+padding: 10px;
+text-align: left;
+font-size: 30px;
+background-color: cornflowerblue;
+}
+main{
+width: 100%;
+}
+img{
+
+margin: 20px 50px;
+
+}
+p{
+  margin: 0 auto;
+  padding-left: 50px;
+  clear:both;
+  width: 200px;
+  overflow: auto; 
+  position: absolute;
+  bottom: 5px;
+  text-align: justify;
+}
+div.imageParent{
+  float: left;
+margin: 10px;
+padding-bottom: 10px;
+border: 2px dashed cadetblue;
+height: 500px;
+
+position: relative;
+}
+
+
+@media (max-width:500px) and (min-width: 300px){
+  ul.nav{
+    margin-top: 5px;
+  }
+  li.nav {
+    margin: 0 30px;
+    padding-top: 10px;
+    display: inline;
+    text-align: center;
+  }
+  nav{
+    width: 90%
+  }
+  main{
+    width: 70%;
+    }
+  p{
+    margin: 0 auto;
+  padding-left: 50px;
+  clear:both;
+  width: 20px;
+  overflow: auto; 
+  position: absolute;
+  font-weight: 300;
+  bottom: 20px;
+  text-align: justify;
+  font-size: 15px;
+  }
+  div.imageParent{
+    margin:2px 20px;
+    
+  }
+  
+}
+
+@media (max-width:1000px) and (min-width: 501px){
+  li.nav{
+    margin: 0 5%;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+  }
+  nav{
+    width: 90%
+  }
+  main{
+    width: 80%;
+    }
+  p{
+    margin: 0 auto;
+  padding-left: 50px;
+  clear:both;
+  width: 20px;
+  overflow: auto; 
+  position: absolute;
+  font-weight: 300;
+  bottom: 20px;
+  text-align: justify;
+  font-size: 15px;
+  }
+  div.imageParent{
+    margin:7px 20px;
+    
+  }
+  
+}
+
