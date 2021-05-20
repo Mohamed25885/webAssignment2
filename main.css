@@ -1,7 +1,37 @@
+body{
+  counter-reset: skill;
+}
+div.skill{
+  
+  counter-reset: branched;
+  font-size: larger;
+}
+
+div.branched{
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: smaller;
+}  
+div.skill::before{
+  counter-increment: skill;
+  
+  content: counter(skill) ") " ;
+}
+div.branched::before{
+  counter-increment: branched;
+  content: counter(branched)". ";
+}  
+
 a.clickable{
   text-decoration: none;
   font-size: 15px;
-  color:indigo;
+  color:blue;
+}
+hr{
+  border-top:5px dotted gray;
+}
+main.about{
+  padding: 20px;
 }
 header{
   text-align: center;
@@ -23,7 +53,7 @@ width: 100%;
 list-style-type: none;
 background-color: blue;
 color: white;
-
+text-align: center;
 font-size: medium;
 
 }
@@ -40,6 +70,7 @@ text-decoration: none;
 color:black;
 }
 li.nav{
+  
   margin: 0 9%;
   padding-top: 5px;
   display: inline-block;
@@ -54,8 +85,19 @@ text-align: left;
 font-size: 30px;
 background-color: cornflowerblue;
 }
-main{
-width: 100%;
+footer.about{
+  
+bottom: 0;
+}
+footer.contact{
+  position: absolute;
+bottom: 0;
+}
+main.home{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }
 img{
 
@@ -63,27 +105,37 @@ margin: 20px 50px;
 
 }
 p{
-  margin: 0 auto;
-  padding-left: 50px;
-  clear:both;
   width: 200px;
   overflow: auto; 
   position: absolute;
+  margin: 0 auto;
+  padding-left: 50px;
   bottom: 5px;
   text-align: justify;
 }
 div.imageParent{
-  float: left;
+  position: relative;
 margin: 10px;
 padding-bottom: 10px;
 border: 2px dashed cadetblue;
 height: 500px;
+width: 300px;
 
-position: relative;
 }
 
 
 @media (max-width:500px) and (min-width: 300px){
+  main.home{
+    flex-direction: center;
+    
+    
+  }
+  ul.about{
+    border: 1px dotted black;
+  }
+  li.about{
+    font-size: 10px;
+  }
   ul.nav{
     margin-top: 5px;
   }
@@ -96,21 +148,8 @@ position: relative;
   nav{
     width: 90%
   }
-  main{
-    width: 70%;
-    }
-  p{
-    margin: 0 auto;
-  padding-left: 50px;
-  clear:both;
-  width: 20px;
-  overflow: auto; 
-  position: absolute;
-  font-weight: 300;
-  bottom: 20px;
-  text-align: justify;
-  font-size: 15px;
-  }
+  
+  
   div.imageParent{
     margin:2px 20px;
     
@@ -119,6 +158,10 @@ position: relative;
 }
 
 @media (max-width:1000px) and (min-width: 501px){
+  main.home{
+    flex-direction: row;
+    align-self: flex-start;
+  }
   li.nav{
     margin: 0 5%;
     padding-top: 5px;
@@ -128,21 +171,8 @@ position: relative;
   nav{
     width: 90%
   }
-  main{
-    width: 80%;
-    }
-  p{
-    margin: 0 auto;
-  padding-left: 50px;
-  clear:both;
-  width: 20px;
-  overflow: auto; 
-  position: absolute;
-  font-weight: 300;
-  bottom: 20px;
-  text-align: justify;
-  font-size: 15px;
-  }
+  
+  
   div.imageParent{
     margin:7px 20px;
     
